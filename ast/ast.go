@@ -97,12 +97,12 @@ func (rs *ReturnStatement) String() string {
 }
 
 type ExpressionStatement struct {
-	Toke       token.Token
+	Token      token.Token
 	Expression Expression
 }
 
 func (es *ExpressionStatement) statementNode()       {}
-func (es *ExpressionStatement) TokenLiteral() string { return es.Toke.Literal }
+func (es *ExpressionStatement) TokenLiteral() string { return es.Token.Literal }
 func (es *ExpressionStatement) String() string {
 	if es.Expression != nil {
 		return es.Expression.String()
