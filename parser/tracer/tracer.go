@@ -29,12 +29,12 @@ func Begin(label string) *Tracer {
 		label:  label,
 	}
 
-	head.print("BEGIN")
+	// head.print("BEGIN")
 	return head
 }
 
 func (t *Tracer) End() {
-	head.print("END")
+	// head.print("END")
 	head = t.parent
 }
 
